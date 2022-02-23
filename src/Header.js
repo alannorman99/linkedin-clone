@@ -2,6 +2,13 @@ import React from "react"
 import "./Header.css"
 
 import SearchIcon from "@material-ui/icons/Search"
+import HeaderOption from "./HeaderOption"
+
+import HomeIcon from "@material-ui/icons/Home"
+import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount"
+import BusinessCenterIcon from "@material-ui/icons/BusinessCenter"
+import ChatIcon from "@material-ui/icons/Chat"
+import NotificationsIcon from "@material-ui/icons/Notifications"
 
 function Header() {
 	return (
@@ -9,16 +16,28 @@ function Header() {
 
 
 			<div className="header_left">
-				<img src="https://cdn-icons.flaticon.com/png/512/3536/premium/3536505.png?token=exp=1645571293~hmac=cb450dfc8b116ecb1fd81b0b06e2cd7d" alt="" />
+				<img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="" />
+
+				<div className="header_search">
+					<SearchIcon />
+					<input type="text" />
+				</div>
 			</div>
 
-			<div className="header_search">
-				<SearchIcon />
-				<input type="text" />
-			</div>
+
 
 
 			<div className="header_right">
+				<HeaderOption Icon={HomeIcon} title="Home" />
+				<HeaderOption Icon={SupervisorAccountIcon} title='My Network' />
+
+				<HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
+				<HeaderOption Icon={ChatIcon} title='Messaging' />
+
+				<HeaderOption Icon={NotificationsIcon} title="Notifications" />
+
+				<HeaderOption avatar="https://compassionate-leakey-e9b16b.netlify.app/images/IG_Sonny.jpeg" title="Me" />
+
 
 			</div>
 
